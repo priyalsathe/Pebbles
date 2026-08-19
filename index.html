@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pebbles — Voice AI That Understands</title>
+  <meta name="description" content="Pebbles is the voice AI that captures every word and turns speech into actionable insight. 4x faster than typing.">
+  <meta property="og:title" content="Pebbles — Voice AI That Understands">
+  <meta property="og:description" content="The voice AI that captures every word and turns speech into actionable insight.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: EB Garamond + Figtree (same as WisprFlow) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION -->
+  <!-- ============================================= -->
+  <nav class="nav" id="nav">
+    <div class="nav_container">
+      <a href="#" class="nav_logo">Pebbles</a>
+      <div class="nav_links" id="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZb7-8G7rv9Hu3mr5i1wXD-w5jB1E7PfCH_Gp_JAqDbGonAw/viewform" target="_blank" rel="noopener noreferrer" class="nav_cta">Try Pebbles</a>
+      <button class="nav_hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <main>
+    <!-- ============================================= -->
+    <!-- HERO SECTION -->
+    <!-- ============================================= -->
+    <section class="hero" id="hero">
+      <div class="hero_content">
+        <div class="hero_tag">Speak it before it slips your mind</div>
+        <h1 class="hero_heading">Your voice,<br><em>is the best keyboard.</em></h1>
+        <p class="hero_subheading">Speak it before it slips your mind. Pebbles is the voice-to-text AI that turns speech into clear, polished writing in every app.</p>
+        <div class="hero_buttons">
+          <a href="#download" class="btn btn-primary" id="btn-download-hero">Download Pebbles</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZb7-8G7rv9Hu3mr5i1wXD-w5jB1E7PfCH_Gp_JAqDbGonAw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-try-hero">Try it out now</a>
+        </div>
+        <p class="hero_platforms">Available on Mac, Windows, iPhone, and Android</p>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- HERO RIBBON ANIMATION (WisprFlow-style) -->
+    <!-- ============================================= -->
+    <div class="hero_ribbon" id="hero-ribbon">
+      <!-- Left ribbon: curved path with scrolling text -->
+      <svg class="hero_ribbon-svg is-left" viewBox="0 0 1048 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="ribbon-curve-1" d="M0.6 50.9 C17.5 143.3 62 299.9 398.6 360.3 C594 395.3 772.8 285.9 668.7 149.3 C564.7 12.6 340.7 271 667 470.4 C719.7 506.6 817.5 561.3 1046.4 565.2" stroke="none" fill="none"/>
+        <text>
+          <textPath id="ribbon-text-1" href="#ribbon-curve-1">
+            Hey, so I was thinking about the meeting notes from yesterday — can you pull up the action items? I think Sarah mentioned the Q3 targets need updating, and we should probably loop in the design team before Friday. Also, remind me to follow up with the client about the revised timeline. Oh, and one more thing — the presentation deck needs those new charts from the analytics dashboard.
+          </textPath>
+          <animate attributeName="x" dur="18s" values="-3000; 0" repeatCount="indefinite"/>
+        </text>
+        <style>
+          #ribbon-text-1 {
+            font-family: 'Figtree', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+          
+            fill: rgba(30, 30, 30, 0.15);
+            baseline-shift: -20%;
+          }
+        </style>
+      </svg>
+
+      <!-- Center interactive mockup container -->
+      <div class="hero_ribbon-center">
+        <!-- Glow effect behind card -->
+        <div class="hero_ribbon-blob"></div>
+        
+        <!-- Interactive Card -->
+        <div class="pebbles_mockup-card">
+          <div class="mockup_header">
+            <div class="mockup_dot-wrap">
+              <span class="mockup_dot is-active"></span>
+              <span class="mockup_status">Pebbles Active</span>
+            </div>
+            <div class="mockup_role-pills">
+              <button class="role_pill active" data-role="executive">👔 Exec</button>
+              <button class="role_pill" data-role="developer">💻 Dev</button>
+              <button class="role_pill" data-role="creative">✨ Creative</button>
+            </div>
+          </div>
+          
+          <div class="mockup_body">
+            <div class="mockup_banner">
+              <span class="icon">📋</span> Detected Form: feedback_form
+            </div>
+            
+            <div class="mockup_chat">
+              <div class="chat_bubble assistant">
+                <span class="avatar">🪨</span>
+                <p>Let's fill this out. What would you like to say?</p>
+              </div>
+              
+              <div class="chat_bubble user">
+                <div class="voice_wave-mini" id="voice-wave-mini">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <p id="typed-casual-speech">Speaking...</p>
+              </div>
+            </div>
+            
+            <div class="mockup_field">
+              <label>Role-Specific Professional Output</label>
+              <div class="input_container">
+                <textarea id="mockup-textarea" readonly>Select a role or let speech finish...</textarea>
+                <div class="shimmer-line" id="mockup-shimmer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right ribbon: second curved path -->
+      <svg class="hero_ribbon-svg is-right" viewBox="0 0 1024 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="ribbon-curve-2" d="M2 563.9 C111.6 558.3 316.5 554 518 490.1 C703 431.3 875.3 444.5 1021.9 453.2" stroke="var(--teal)" stroke-width="28" fill="none"/>
+        <text>
+          <textPath id="ribbon-text-2" href="#ribbon-curve-2">
+            Meeting notes captured. Action items: Update Q3 targets, loop in design team before Friday, follow up with client on revised timeline, update presentation deck with analytics charts. All tasks synced to your project board.
+          </textPath>
+          <animate attributeName="x" dur="33s" values="-3000; 0" repeatCount="indefinite"/>
+        </text>
+        <style>
+          #ribbon-text-2 {
+            font-family: 'Figtree', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            fill: var(--cream-light);
+            baseline-shift: -30%;
+          }
+        </style>
+      </svg>
+    </div>
+
+
+    <!-- ============================================= -->
+    <!-- TRUSTED BY / MARQUEE -->
+    <!-- ============================================= -->
+    <section class="marquee" id="trusted-by">
+      <div class="marquee_label">Trusted by professionals at</div>
+      <div class="marquee_track">
+        <div class="marquee_content">
+          <div class="marquee_logo-item">Spotify</div>
+          <div class="marquee_logo-item">Notion</div>
+          <div class="marquee_logo-item">Stripe</div>
+          <div class="marquee_logo-item">Vercel</div>
+          <div class="marquee_logo-item">Linear</div>
+          <div class="marquee_logo-item">Figma</div>
+          <div class="marquee_logo-item">Slack</div>
+          <div class="marquee_logo-item">Raycast</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee_logo-item">Spotify</div>
+          <div class="marquee_logo-item">Notion</div>
+          <div class="marquee_logo-item">Stripe</div>
+          <div class="marquee_logo-item">Vercel</div>
+          <div class="marquee_logo-item">Linear</div>
+          <div class="marquee_logo-item">Figma</div>
+          <div class="marquee_logo-item">Slack</div>
+          <div class="marquee_logo-item">Raycast</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- SPEED SECTION (dark teal, rounded) -->
+    <!-- ============================================= -->
+    <section class="speed" id="speed">
+      <div class="speed_content fade-in">
+        <h2 class="speed_heading">4x faster <em>than typing</em></h2>
+        <p class="speed_subtext">Pebbles lets you create, code, message, and write at the speed of thought — 4x faster than your keyboard.</p>
+      </div>
+
+      <div class="speed_cards fade-in">
+        <div class="speed_card is-slow">
+          <div class="speed_card-label">Keyboard</div>
+          <div class="speed_card-metric" data-count="45">0 wpm</div>
+          <!-- Straight line marquee -->
+          <svg class="speed_wave" viewBox="0 0 928 76" xmlns="http://www.w3.org/2000/svg">
+            <path id="speed-straight" d="M0 44 H2000" stroke="none" fill="none"/>
+            <text>
+              <textPath href="#speed-straight" fill="rgba(255,255,235,0.25)" font-family="Figtree, sans-serif" font-size="15" font-weight="600">
+                I'm getting started with the project. How would you like to set up the file? I can create a new one from scratch, or pull in something you're already working with. What sounds good? I'm getting started with the project.
+              </textPath>
+              <animate attributeName="x" dur="17s" values="0; -928" repeatCount="indefinite"/>
+            </text>
+          </svg>
+          <!-- Typing cursor animation -->
+          <div class="speed_typing-cursor"></div>
+        </div>
+
+        <div class="speed_card is-fast">
+          <div class="speed_card-shimmer"></div>
+          <div class="speed_card-label">Pebbles</div>
+          <div class="speed_card-metric" data-count="220">0 wpm</div>
+          <!-- Wavy line marquee -->
+          <svg class="speed_wave" viewBox="0 0 928 76" xmlns="http://www.w3.org/2000/svg">
+            <path id="speed-wave" d="M0.5 74.8 C216 74.8 283.1 0.5 467.5 0.8 C650.4 1.1 649 74.8 927.5 74.8" stroke="none" fill="none"/>
+            <text>
+              <textPath href="#speed-wave" fill="rgba(26,26,26,0.3)" font-family="Figtree, sans-serif" font-size="15" font-weight="600">
+                Getting started with the project. Set up the file from scratch or pull in existing work. Structure is ready. Walk me through what you're building, or start with a template. Getting started with the project.
+              </textPath>
+              <animate attributeName="x" dur="12s" values="0; -928" repeatCount="indefinite"/>
+            </text>
+          </svg>
+          <!-- Animated audio visualization pill -->
+          <div class="speed_pill">
+            <div class="speed_pill-bars-wrap">
+              <span class="bar" style="--i:0"></span>
+              <span class="bar" style="--i:1"></span>
+              <span class="bar" style="--i:2"></span>
+              <span class="bar" style="--i:3"></span>
+              <span class="bar" style="--i:4"></span>
+              <span class="bar" style="--i:5"></span>
+              <span class="bar" style="--i:6"></span>
+              <span class="bar" style="--i:7"></span>
+              <span class="bar" style="--i:8"></span>
+              <span class="bar" style="--i:9"></span>
+              <span class="bar" style="--i:10"></span>
+              <span class="bar" style="--i:11"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- FEATURES SECTION -->
+    <!-- ============================================= -->
+    <section class="features" id="features">
+      <div class="features_heading fade-in">
+        <h2 class="interactive-heading">
+          <span class="heading-line line-1">Built around <em>how you think,</em></span>
+          <span class="heading-line line-2">not how we think you should.</span>
+        </h2>
+      </div>
+
+      <div class="features_grid">
+        <div class="feature_card fade-in" data-delay="0">
+          <div class="feature_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" x2="12" y1="19" y2="22"/>
+            </svg>
+          </div>
+          <h3 class="feature_title">Instant Capture</h3>
+          <p class="feature_desc">Record and transcribe in real-time with near-perfect accuracy. Pebbles understands context, not just words — so your notes actually make sense.</p>
+        </div>
+
+        <div class="feature_card fade-in" data-delay="100">
+          <div class="feature_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" x2="8" y1="13" y2="13"/>
+              <line x1="16" x2="8" y1="17" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="feature_title">Smart Summaries</h3>
+          <p class="feature_desc">AI-powered meeting notes that pull out action items, key decisions, and follow-ups automatically. Never miss what matters.</p>
+        </div>
+
+        <div class="feature_card fade-in" data-delay="200">
+          <div class="feature_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" x2="22" y1="12" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="feature_title">100+ Languages</h3>
+          <p class="feature_desc">Pebbles automatically detects and transcribes the language you're speaking, so you can switch between languages naturally.</p>
+        </div>
+
+        <div class="feature_card fade-in" data-delay="300">
+          <div class="feature_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" x2="16" y1="21" y2="21"/>
+              <line x1="12" x2="12" y1="17" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="feature_title">Works Everywhere</h3>
+          <p class="feature_desc">Pebbles works across all your apps — Slack, Gmail, Notion, VS Code, and more. Speak anywhere you'd normally type.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- HOW IT WORKS -->
+    <!-- ============================================= -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="how_heading fade-in">
+        <h2>How Pebbles <em class="giggle">works</em></h2>
+
+      </div>
+
+      <div class="how_steps">
+        <div class="how_step fade-in" data-delay="0">
+          <div class="how_step-number">01</div>
+          <h3 class="how_step-title">Speak naturally</h3>
+          <p class="how_step-desc">Just talk. Pebbles captures your voice in any app, anywhere — no buttons, no setup. Activate with a simple shortcut and go.</p>
+        </div>
+        <div class="how_step fade-in" data-delay="150">
+          <div class="how_step-number">02</div>
+          <h3 class="how_step-title">Pebbles processes</h3>
+          <p class="how_step-desc">AI cleans up filler words, fixes grammar, restructures for clarity, and formats to match the context you're writing in.</p>
+        </div>
+        <div class="how_step fade-in" data-delay="300">
+          <div class="how_step-number">03</div>
+          <h3 class="how_step-title">Get polished text</h3>
+          <p class="how_step-desc">Clean, professional text appears instantly — as if you'd typed it yourself. Review, edit, or send. It's that simple.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- TESTIMONIALS -->
+    <!-- ============================================= -->
+    <section class="testimonials" id="testimonials">
+      <div class="testi_heading fade-in">
+        <h2>Loved by <em>thousands</em></h2>
+      </div>
+
+      <div class="testi_grid">
+        <div class="testi_card fade-in" data-delay="0">
+          <p class="testi_quote">"Pebbles has completely changed how I work. I used to spend hours typing up meeting notes — now they're done before the meeting even ends."</p>
+          <div class="testi_author">Shreya</div>
+          <div class="testi_role">Product Manager at Startup</div>
+        </div>
+        <div class="testi_card fade-in" data-delay="100">
+          <p class="testi_quote">"The accuracy is unreal. It understands my accent, catches technical jargon, and the summaries are genuinely useful. Best tool I've adopted this year."</p>
+          <div class="testi_author">Priyal Sathe</div>
+          <div class="testi_role">Engineer</div>
+        </div>
+        <div class="testi_card fade-in" data-delay="200">
+          <p class="testi_quote">"I write 3x more emails now and they're somehow better. Pebbles gets the tone right every time — professional for clients, casual for teammates."</p>
+          <div class="testi_author">shardul</div>
+          <div class="testi_role">Founder & CEO at Basalt</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================= -->
+    <!-- FINAL CTA -->
+    <!-- ============================================= -->
+    <section class="final-cta" id="download">
+      <div class="final-cta_content fade-in">
+        <h2>Ready to speak<br><em>your mind?</em></h2>
+        <p class="final-cta_subtext">Join thousands of professionals who write faster, think clearer, and do more with their voice.</p>
+        <div class="hero_buttons">
+          <a href="#" class="btn btn-primary" id="btn-download-footer">Download Pebbles</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZb7-8G7rv9Hu3mr5i1wXD-w5jB1E7PfCH_Gp_JAqDbGonAw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-try-footer">Try it out now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="footer_container">
+      <div class="footer_left">
+        <div class="footer_brand">Pebbles</div>
+        <div class="footer_copy">&copy; 2026 Pebbles. All rights reserved.</div>
+      </div>
+      <div class="footer_links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
